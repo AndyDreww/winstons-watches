@@ -1,0 +1,493 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #d1beab;
+    font-family: Lora;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  
+  h1, 
+  h2,
+  h3 {
+    font-family: 'Goudy Bookletter 1911';
+    color: #3e3e3e;
+  }
+  
+  h1 {
+    font-size: 43px;
+  }
+  
+  h2 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    line-height: 1.15;
+    color: #eee;
+  }
+  
+  section {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;  
+  }
+  
+  header {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-size: 24px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+  
+    header:hover {
+      background-color: rgba(114, 104, 93, 0.5);;    
+    }
+  
+  header a {
+    margin-left: 20px;
+    color: #3e3e3e;
+    text-decoration: none;
+    padding-bottom: 3px;
+  }
+  
+  header a:hover {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  header .nav-toggle {
+    display: none;
+    font-size: 34px;
+  }
+  
+  header .nav-toggle:hover {
+    cursor: pointer;
+  }
+  
+  .sm-nav {
+    position: fixed;
+    background-color: #72685d;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+  }
+  
+  .close-menu {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    font-size: 40px;
+  }
+  
+  .close-menu:hover {
+    cursor: pointer;
+  }
+  
+  .sm-nav nav {
+    margin-top: 60px;
+  }
+  
+  .sm-nav a {
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 38px;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .zoom .copy {
+    transition: all .7s ease;  
+  }
+  
+  .zoom img {
+    scale: 1;
+    transition: all .7s ease;  
+  }
+  
+  .zoom:hover img {
+    scale: 1.15;  
+  }
+  
+  .zoom:hover .copy {
+    scale: 1.15;
+    right: 20px;  
+  }
+  
+  .intro {
+    margin-top: 140px;
+  }
+  
+  .intro img {
+    width: 450px;
+  }
+  
+  .intro h2 {
+       color: #eee; 
+  }
+  
+  .intro .copy {
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%);
+       max-width: 420px;
+    right: 10px;
+  }
+  
+  .intro p {
+    max-width: 200px;
+    text-align: left;
+    left: 70px;
+    position: absolute;
+  }
+  
+  .about {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 80px;
+  }
+  
+  .about img {
+    width: 600px;
+  }
+  
+  .about .copy {
+    position: absolute;
+    left: 10px;
+    max-width: 370px;
+    text-align: right;
+    top: 20%;
+    transition: all .7s ease;
+  }
+  
+  .about:hover .copy {
+    scale: 1.15;
+  }
+  
+  .products {
+    margin-top: 20px;
+  }
+  
+  .products-main {
+    display: grid;  
+    grid-template-columns: auto auto auto;
+  }
+  
+  .products .product {
+    position: relative;
+    max-height: 200px;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  .product .product-text {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(350,366,366,0.3);
+    transition: all .7s ease;
+    padding: 15px;
+  }
+  
+  .product:hover .product-text {
+    background-color: rgba(0,0,0,0.5);  
+  }
+  
+  .product h3 {
+    font-size: 22px;
+    color: #fff;
+  }
+  
+  .products-top a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .filter-toggle {
+    display: none;
+    font-weight: 700;
+  } 
+  
+  .filters {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .filters li {
+    display: inline-block;
+  }
+  
+  .filters a {
+    margin-right: 15px;
+  }
+  
+  .filters a:hover {
+    color: #000;
+  }
+  
+  .product p {
+    font-size: 44px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  .product h3,
+  .product p {
+    opacity: 0;
+    transition: opacity .7s ease;
+  }
+  
+  .product:hover h3,
+  .product:hover p {
+    opacity: 1;
+  }
+  
+  .lookbook {
+    padding: 300px 40px 180px;
+    text-align: center;
+    background-image: url(imgs/promo5.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    margin-top: 40px;
+    transition: all .5s ease;
+    opacity: .7;  
+  }
+  
+  .lookbook h3 {
+    font-size: 60px;
+    color: #fff;  
+    opacity: .7;
+    transition: all .5s ease;
+  }
+  
+  .lookbook:hover {
+    cursor: crosshair;
+    opacity: 1;
+  }
+  
+  .lookbook:hover h3 {
+    scale: 1.15;
+    opacity: 1;
+  }
+  
+  .locations {
+    overflow: hidden;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+  
+  .locations p {
+    margin-bottom: 15px;
+  }
+  
+  .locations div {
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 40px 20px;
+    opacity: .6;
+    transition: all .5s ease;
+  }
+  
+  .locations div:hover {
+    opacity: 1;
+  }
+  
+  .locations div img {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    padding: 15px 40px;
+    color: #fff;
+    background-color: #72685d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer .socials {
+    font-size: 36px;
+  }
+  
+  footer .socials i:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
+  
+  /* start of breakpoints */
+  @media (max-width:960px) {
+    .products-main {
+      grid-template-columns: auto auto;    
+    }
+    
+    header .md-nav {
+      display: none;
+    }
+    
+    header .nav-toggle {
+      display: block;
+    }
+    
+    .intro img {
+      width: 350px;
+    }
+    
+    .about .copy {
+      left: 20px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    body {
+      font-size: 18px;
+    }
+    
+    h2 {
+      font-size: 45px;
+    }
+    
+    .zoom:hover .copy {
+      right: 50px;
+    }
+    
+    .intro .copy {
+      transform: none;
+      right: 120px;
+    }
+    
+    .intro p {
+      left: 80px;
+    }
+    
+    .about img {
+      width: 450px;
+    }
+    
+    .about .copy {
+      max-width: 300px;
+      right: 30px;
+    }
+    
+    .locations div {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .intro img {
+      width: 220px;
+    }
+    .intro .copy {
+      right: 20px;
+    }
+    
+    .about img {
+      width: 300px;
+    }
+    
+    .lookbook {
+      padding: 250px 40px 140px;    
+    }
+    
+    .lookbook h3 {
+      font-size: 36px;    
+    }
+    
+    .locations div {
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+  
+    h1 {
+      font-size: 34px;
+      color: #eee;    
+    }
+    
+    header {
+      background-color: rgba(114, 104, 93, 0.5);
+    }
+    
+    header .nav-toggle {
+      color: #fff;
+    }
+    
+    
+    .intro .copy {
+      position: relative;  
+      transform: none;
+      right: 0;
+    }
+    
+    .intro .copy p {
+      position: relative;
+      max-width: 280px;
+      text-align: left;
+      left: 0;
+    }
+    
+    .intro:hover .copy {
+      right: 10px;
+    }
+    
+    .about {
+      display: block;
+    }
+    
+    .about .copy {
+      position: relative;
+      text-align: left;
+      top: 0;
+    }
+    
+    .products-main {
+    grid-template-columns: auto;    
+    }
+    
+    .filter-toggle {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 20px;
+    } 
+  
+  .filters {
+      display: none;
+    }  
+    
+    .locations div {
+      font-size: 18px;
+    }
+    
+    footer {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 500px) {
+    .filters {
+      display: block !important;
+    }
+  }
